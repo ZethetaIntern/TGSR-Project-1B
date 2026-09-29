@@ -1,0 +1,24 @@
+{
+  "project": "Temporal Graph Sector Rotation Network \u2014 Project 1B",
+  "generated": "2026-09-29",
+  "status": "engineering-complete / empirical-data-run pending",
+  "source_brief": "493561B_Project_1B_TGSR-1.pdf",
+  "deliverables": [
+    "reports/Main_Report_TGSR_Project_1B.pdf",
+    "reports/Main_Report_TGSR_Project_1B.docx",
+    "python/",
+    "r/",
+    "reports/Model_Experimentation_Ablation_Report.pdf",
+    "excel/TGSR_Validation_Workbook.xlsx",
+    "presentation/Final_Presentation_18_Slides.pptx",
+    "presentation/Final_Presentation_18_Slides.pdf",
+    "docs/Sector_Compass_Design.md",
+    "docs/Demo_Video_Script.md"
+  ],
+  "validation_warning": "Synthetic smoke-test values must not be represented as NSE historical results.",
+  "smoke_test_execution": {
+    "returncode": 0,
+    "stdout": "                 IC    RankIC    NDCG@3  Top3HitRate\nmodel                                               \nGCN        0.018644  0.032567  0.373635     0.310606\nGraphSAGE -0.006505 -0.027173  0.299876     0.219697\nGAT        0.049952  0.050549  0.304301     0.219697\nGATv2      0.022314  0.008292  0.327227     0.250000\nTGAT      -0.005280 -0.017682  0.271341     0.189394\n",
+    "stderr": "Spreadsheet runtime warmup failed during python startup\nTraceback (most recent call last):\n  File \"/tmp/tmp.L2TH2Y5coc/artifact_tool_v2-2.8.22/artifact_tool/patches/warm_spreadsheet_runtime_on_startup.py\", line 26, in warm_spreadsheet_runtime_on_startup\n  File \"/tmp/tmp.L2TH2Y5coc/artifact_tool_v2-2.8.22/artifact_tool/spreadsheet_warmup.py\", line 785, in warm_spreadsheet_runtime\n  File \"/tmp/tmp.L2TH2Y5coc/artifact_tool_v2-2.8.22/artifact_tool/spreadsheet_warmup.py\", line 720, in _warm_feature_flows\n  File \"/tmp/tmp.L2TH2Y5coc/artifact_tool_v2-2.8.22/artifact_tool/spreadsheet_warmup.py\", line 704, in _warm_collaboration_flows\n  File \"/tmp/tmp.L2TH2Y5coc/artifact_tool_v2-2.8.22/artifact_tool/generated/interface/models.py\", line 32317, in hydrate_crdt_from_proto\n  File \"/tmp/tmp.L2TH2Y5coc/artifact_tool_v2-2.8.22/artifact_tool/rpc/remote.py\", line 749, in __call__\n  File \"/tmp/tmp.L2TH2Y5coc/artifact_tool_v2-2.8.22/artifact_tool/rpc/client.py\", line 150, in call\nartifact_tool.rpc.client.RemoteError: hydrateCrdtFromProto requires an empty collaborative document.\n/mnt/data/TGSR_Project_1B/python/src/train.py:14: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.\nConsider using tensor.detach() first. (Triggered internally at /pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:836.)\n  loss=loss_fn(out,y); opt.zero_grad(); loss.backward(); torch.nn.utils.clip_grad_norm_(model.parameters(),2); opt.step(); total+=float(loss)\n"
+  }
+}
